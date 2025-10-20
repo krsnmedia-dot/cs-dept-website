@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Events | CS Department</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+<nav class="navbar">
+  <div class="logo"><img src="images/logo.png" alt="Logo"></div>
+  <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="faculty.html">Faculty</a></li>
+    <li><a href="courses.html">Courses</a></li>
+    <li><a href="events.html" class="active">Events</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+</header>
+
+<section class="events">
+  <h2>Upcoming Events</h2>
+
+  <div class="horizontal-scroll">
+    <div class="event-card" onclick="openModal(0)"><img src="images/event1.jpg"><h3>AI Workshop</h3></div>
+    <div class="event-card" onclick="openModal(1)"><img src="images/event2.jpg"><h3>Guest Lecture</h3></div>
+   <div class="event-card" onclick="openModal(0)"><img src="images/event1.jpg"><h3>AI Workshop</h3></div>
+    <div class="event-card" onclick="openModal(1)"><img src="images/event2.jpg"><h3>Guest Lecture</h3></div>
+  </div>
+
+  <div class="horizontal-scroll">
+    <div class="event-card" onclick="openModal(2)"><img src="images/event3.jpg"><h3>Hackathon</h3></div>
+    <div class="event-card" onclick="openModal(3)"><img src="images/event4.jpg"><h3>Seminar</h3></div>
+     <div class="event-card" onclick="openModal(2)"><img src="images/event3.jpg"><h3>Hackathon</h3></div>
+    <div class="event-card" onclick="openModal(3)"><img src="images/event4.jpg"><h3>Seminar</h3></div>
+  </div>
+
+</section>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="modal-img">
+  <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+  <a class="next" onclick="changeSlide(1)">&#10095;</a>
+</div>
+
+<footer>
+  <p>&copy; 2025 KR's Sree Narayana College | Department of Computer Science</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
